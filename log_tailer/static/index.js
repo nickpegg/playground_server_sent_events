@@ -4,9 +4,6 @@ function main() {
     console.log("Tailer starting");
     document.querySelector("#log").textContent = logContents;
 
-    // Set to true if log scroll was done automatically
-    wasAutoScroll = false;
-
     // Should we auto-scroll the log?
     followLog = false;
 
