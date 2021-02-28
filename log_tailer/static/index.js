@@ -6,6 +6,7 @@ function main() {
 
     // Should we auto-scroll the log?
     followLog = false;
+    document.querySelector("#follow").checked = followLog;
 
     // Element containing the log
     logEl = document.querySelector("#log")
