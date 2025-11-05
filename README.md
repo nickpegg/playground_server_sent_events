@@ -14,3 +14,8 @@ displayed log, and even has the option to auto-scroll the log like `tail -F`!
 
 To see this in action, run `make run` in a terminal and then open
 https://localhost:5000/ in a web browser.
+
+
+## log_tailer_htmx
+
+Same thing as the original log tailer, but using the [htmx](https://htmx.org) framework.

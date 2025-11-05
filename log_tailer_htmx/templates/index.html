@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Log Tailer</title>
+
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            .box {
+                display: flex;
+                flex-flow: column;
+                height: 98%;
+                padding: 10px;
+            }
+            .log-container {
+                flex-grow: 1;
+                display: flex;
+            }
+            #log {
+                background: #dddddd;
+                flex-grow: 1;
+            }
+        </style>
+        <script src="/static/htmx.js"></script>
+        <script src="/static/sse.js"></script>
+    </head>
+    <body>
+        <div class="box">
+            <h1>Log Tailer</h1>
+            <div>
+                <input type="checkbox" id="follow">Follow</input>
+            </div>
+
+            <div class="log-container">
+                <textarea
+                    id="log"
+                    hx-ext="sse"
+                    sse-connect="/read"
+                    sse-swap="logLine"
+                    hx-swap="beforeend scroll:bottom"
+                ></textarea>
+            </div>
+        </div>
+
+    </body>
+</html>

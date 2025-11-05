@@ -1,0 +1,1 @@
+../node_modules/htmx-ext-sse/dist/sse.js
